@@ -1,0 +1,12 @@
+# Private configuration
+.env
+
+# Installed dependencies and transient files
+node_modules/
+npm-debug.log*
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

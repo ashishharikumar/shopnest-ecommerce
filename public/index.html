@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>ShopNest — Everyday, elevated</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="toast"></div>
+    <header><a class="brand" href="#home">shop<span>nest</span>.</a>
+        <nav><a href="#shop">Shop</a><a href="#orders" class="auth-only">My orders</a><a href="#admin"
+                class="admin-only">Admin</a></nav>
+        <div class="head-actions"><button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button><button
+                class="cart-btn" id="cartBtn">Bag <b id="cartCount">0</b></button><button id="accountBtn"
+                class="account-btn">Sign in</button></div>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div>
+                <p class="eyebrow">THE NEW COLLECTION</p>
+                <h1>Made for your <em>everyday.</em></h1>
+                <p class="hero-copy">Thoughtful pieces for a life beautifully lived. Discover a collection that feels as
+                    good as it looks.</p><a class="button" href="#shop">Shop the collection <span>→</span></a>
+            </div>
+            <div class="hero-image"><img
+                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1100&q=85"
+                    alt="Clothing collection"></div>
+        </section>
+        <section id="shop" class="section">
+            <div class="section-top">
+                <div>
+                    <p class="eyebrow">CURATED FOR YOU</p>
+                    <h2>New arrivals</h2>
+                </div>
+                <div class="filters"><button class="filter active" data-category="All">All</button><button
+                        class="filter" data-category="Electronics">Tech</button><button class="filter"
+                        data-category="Accessories">Accessories</button><button class="filter"
+                        data-category="Home">Home</button></div>
+            </div>
+            <div id="productGrid" class="products"></div>
+        </section>
+        <section id="orders" class="section hidden">
+            <p class="eyebrow">YOUR PURCHASES</p>
+            <h2>My orders</h2>
+            <div id="ordersList" class="orders-list"></div>
+        </section>
+        <section id="admin" class="section hidden">
+            <div class="admin-title">
+                <div>
+                    <p class="eyebrow">CONTROL PANEL</p>
+                    <h2>Admin dashboard</h2>
+                </div><button class="button small" id="addProductBtn">+ Add product</button>
+            </div>
+            <div id="stats" class="stats"></div>
+            <div class="admin-tabs"><button data-admin-tab="products" class="active">Products</button><button
+                    data-admin-tab="orders">Orders</button><button data-admin-tab="customers">Customers</button></div>
+            <div id="adminContent"></div>
+        </section>
+    </main>
+    <footer><span>© 2026 ShopNest</span><span>Designed for the good things.</span></footer>
+    <aside id="cartPanel" class="drawer">
+        <div class="drawer-head">
+            <h3>Your bag</h3><button class="close">×</button>
+        </div>
+        <div id="cartItems"></div>
+        <div class="cart-bottom">
+            <div><span>Subtotal</span><strong id="cartTotal">₹0</strong></div><button id="checkoutBtn"
+                class="button full">Checkout →</button>
+        </div>
+    </aside>
+    <div id="overlay"></div>
+    <div id="modal" class="modal">
+        <div class="modal-card"><button class="modal-close">×</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
